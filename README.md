@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/dunamismax/lua-apps/blob/main/lua.jpg" alt="Lua Logo" width="300" />
+  <img src="lua.jpg" alt="Lua Logo" width="500" />
 </p>
 
 <p align="center">
