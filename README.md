@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="https://github.com/dunamismax/lua-apps/blob/main/lua.jpg" alt="Lua Logo" width="300" />
+</p>
+
+<p align="center">
   <a href="https://github.com/dunamismax/lua-apps">
     <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=24&pause=1000&color=000080&center=true&vCenter=true&width=800&lines=Lua+Apps+Monorepo;Complete+Application+Development+Stack;CLI+%2B+Web+%2B+Mobile+%2B+Static+Sites;From+Command+Line+to+Cross+Platform;Pure+Lua%2C+Maximum+Versatility." alt="Typing SVG" />
   </a>
