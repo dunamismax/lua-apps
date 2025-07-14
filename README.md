@@ -1,24 +1,89 @@
-# Lua Apps Monorepo
+<p align="center">
+  <a href="https://github.com/dunamismax/lua-apps">
+    <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=24&pause=1000&color=000080&center=true&vCenter=true&width=800&lines=Lua+Apps+Monorepo;Complete+Application+Development+Stack;CLI+%2B+Web+%2B+Mobile+%2B+Static+Sites;From+Command+Line+to+Cross+Platform;Pure+Lua%2C+Maximum+Versatility." alt="Typing SVG" />
+  </a>
+</p>
 
-A comprehensive monorepo for building various types of applications using the Lua programming language and its ecosystem. This repository demonstrates the versatility of Lua for web development, mobile apps, desktop applications, CLI tools, and static site generation.
+<p align="center">
+  <a href="https://www.lua.org/"><img src="https://img.shields.io/badge/Lua-5.4+-000080.svg?logo=lua" alt="Lua Version"></a>
+  <a href="https://luajit.org/"><img src="https://img.shields.io/badge/LuaJIT-2.1-blue.svg" alt="LuaJIT Version"></a>
+  <a href="https://leafo.net/lapis/"><img src="https://img.shields.io/badge/Lapis-1.9+-green.svg" alt="Lapis Version"></a>
+  <a href="https://solar2d.com/"><img src="https://img.shields.io/badge/Solar2D-2024-orange.svg" alt="Solar2D"></a>
+  <a href="https://github.com/mpeterv/argparse"><img src="https://img.shields.io/badge/argparse-0.7+-red.svg" alt="argparse"></a>
+  <a href="https://img.shields.io/github/license/dunamismax/lua-apps"><img src="https://img.shields.io/github/license/dunamismax/lua-apps" alt="License"></a>
+  <a href="https://github.com/dunamismax/lua-apps/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
+  <a href="https://github.com/dunamismax/lua-apps/stargazers"><img src="https://img.shields.io/github/stars/dunamismax/lua-apps" alt="GitHub Stars"></a>
+</p>
 
-## 🚀 Quick Start
+---
+
+## About This Project
+
+A comprehensive, production-ready monorepo for application development using the complete Lua ecosystem. This repository demonstrates modern development workflows across multiple platforms, from command-line utilities to web APIs, mobile applications, and static site generation.
+
+**Key Features:**
+
+- **Complete Platform Coverage** - CLI, Web, Mobile, Desktop, and Static Sites all in one place
+- **Production-Grade Structure** - Shared libraries, utilities, and organized project templates
+- **Working Demo Applications** - Fully functional examples for each platform
+- **Developer-Friendly Tools** - Scripts for setup, testing, building, and deployment
+- **Comprehensive Documentation** - Guides, best practices, and API references
+- **Cross-Platform Ready** - Support for all major operating systems and deployment targets
+
+---
+
+## Use This Template
+
+This repository serves as a GitHub template, providing developers with a robust foundation for building Lua-based applications across multiple platforms. Rather than cloning, you can create your own repository instance with all essential infrastructure and demo applications pre-configured.
+
+**To get started:**
+
+1. Click the green **"Use this template"** button at the top right of this repository
+2. Choose "Create a new repository"
+3. Name your repository and set it to public or private
+4. Click "Create repository from template"
+
+This will create a new repository in your GitHub account with all the code, structure, and configuration files needed to start building applications immediately using the complete Lua development stack.
+
+**Advantages of using the template:**
+
+- Establishes a clean git history beginning with your initial commit
+- Configures your repository as the primary origin (not a fork)
+- Enables complete customization of repository name and description
+- Provides full ownership and administrative control of the codebase
+
+---
+
+## Quick Start
+
+### Prerequisites
+
+- **[Lua/LuaJIT](https://www.lua.org/)** - The Lua programming language
+- **[LuaRocks](https://luarocks.org/)** - Lua package manager
+- **[Lapis](https://leafo.net/lapis/)** - Web framework (for web apps)
+- **[Solar2D](https://solar2d.com/)** - Cross-platform framework (for mobile/desktop apps)
+
+### Quick Setup
 
 ```bash
-# Set up the development environment
+# 1. Clone and enter the repository
+git clone https://github.com/dunamismax/lua-apps.git
+cd lua-apps
+
+# 2. Set up development environment
 make setup
 
-# Run all tests
-make test
-
-# Build all applications
-make build
-
-# Try the demo applications
-make demo
+# 3. Run demo applications
+make demo  # Show all available demos
+make build  # Build all applications
+make test   # Run comprehensive test suite
 ```
 
-## 📁 Repository Structure
+---
+
+## Architecture
+
+### Project Structure
 
 ```
 lua-apps/
@@ -45,242 +110,211 @@ lua-apps/
 └── examples/                      # Code examples
 ```
 
-## 🛠️ Technology Stack
+---
 
-### Core Runtime
-- **[LuaJIT](https://luajit.org/)** - High-performance Lua interpreter with JIT compilation
+<details>
+<summary><strong>Click to expand: Technology Stack Details</strong></summary>
 
-### Web Development
-- **[Lapis](https://leafo.net/lapis/)** - Fast web framework running on OpenResty
-- **Custom Static Site Generator** - Markdown-based content management
+This monorepo encompasses the complete Lua application development ecosystem, providing developers with a unified development environment across multiple specialized platforms. Each component targets different application contexts while maintaining the simplicity and power of Lua as the core programming language.
 
-### Mobile & Desktop
-- **[Solar2D](https://solar2d.com/)** - Cross-platform framework for iOS, Android, Windows, macOS, and Linux
+### **Web Development: Modern HTTP Services**
 
-### CLI Development
-- **[argparse](https://github.com/mpeterv/argparse)** - Command-line argument parsing
+The foundation for building scalable web applications and APIs.
 
-### Core Libraries
-- **[LuaSocket](https://lunarmodules.github.io/luasocket/)** - Networking library
-- **[lua-http](https://daurnimator.github.io/lua-http/)** - HTTP/WebSocket library
-- **[Lanes](https://github.com/LuaLanes/lanes)** - Multithreading support
-- **[lume](https://github.com/rxi/lume)** - Utility functions
+- [**Lapis**](https://leafo.net/lapis/)
+  - **Role:** High-Performance Web Framework
+  - **Description:** A fast and flexible web framework for Lua that runs on OpenResty (Nginx + LuaJIT). Lapis leverages Lua coroutines for asynchronous request handling, making it ideal for building scalable APIs and web applications with exceptional performance.
+- **Static Site Generation:** Custom Markdown-to-HTML converter with frontmatter support
+- **HTTP Client:** Full-featured client for REST API consumption and external service integration
 
-## 🏗️ Applications
+### **Mobile & Desktop Development: Cross-Platform Applications**
 
-### CLI Applications
+Native application development for all major platforms from a single codebase.
 
-#### Todo Manager (`apps/cli/todo-manager.lua`)
-A full-featured command-line todo list manager.
+- [**Solar2D**](https://solar2d.com/)
+  - **Role:** Cross-Platform Mobile and Desktop Framework
+  - **Description:** A mature, free, and open-source framework for building 2D applications and games for iOS, Android, Windows, Linux, macOS, and tvOS. Solar2D's streamlined workflow and powerful APIs enable rapid development of rich, interactive apps.
+- **Physics Integration:** Built-in Box2D physics engine for interactive applications
+- **Cross-Platform Deployment:** Single codebase compiles to all major platforms
 
-```bash
-# Add a todo
-luajit apps/cli/todo-manager.lua add "Learn Lua" -d "Study Lua programming"
+### **Command-Line Development: Professional CLI Tools**
 
-# List all todos
-luajit apps/cli/todo-manager.lua list
+Building powerful and user-friendly command-line applications.
 
-# Complete a todo
-luajit apps/cli/todo-manager.lua complete 1
+- [**argparse**](https://github.com/mpeterv/argparse)
+  - **Role:** Command-Line Parsing Library
+  - **Description:** A feature-rich command-line parser inspired by Python's argparse. Supports positional arguments, options, flags, sub-commands, and automatic help generation for professional CLI experiences.
 
-# Remove a todo
-luajit apps/cli/todo-manager.lua remove 1
-```
+### **Shared Development Libraries**
 
-#### File Organizer (`apps/cli/file-organizer.lua`)
-Organize files by extension or date.
+A curated collection of production-tested libraries for common development tasks.
 
-```bash
-# Organize by file extension
-luajit apps/cli/file-organizer.lua /path/to/messy/folder -m extension
+- [**lume**](https://github.com/rxi/lume)
+  - **Role:** General-Purpose Utility Library
+  - **Description:** Essential helper functions extending Lua's standard library with tools for math, table manipulation, functional programming, and application-specific utilities.
+- [**LuaSocket**](https://lunarmodules.github.io/luasocket/)
+  - **Role:** Low-Level Networking Library
+  - **Description:** The foundational Lua library for network programming, providing straightforward access to TCP, UDP, and HTTP protocols.
+- [**Lanes**](https://github.com/LuaLanes/lanes)
+  - **Role:** Multithreading Library
+  - **Description:** Enables true multithreading by running parallel Lua states in separate OS threads, essential for CPU-intensive tasks and concurrent processing.
 
-# Organize by modification date
-luajit apps/cli/file-organizer.lua /path/to/photos -m date
-```
+### **Development Tools and Workflow**
 
-### Web Applications
+Modern development tooling designed for rapid iteration and professional application development.
 
-#### Blog API (`apps/web/blog-api/`)
-RESTful API built with the Lapis web framework.
+- **Environment Setup:** Automated dependency installation and configuration
+- **Testing Framework:** Comprehensive test runner with syntax validation and unit tests
+- **Build Automation:** Makefile with shortcuts for common development tasks
+- **Documentation System:** Complete API references and development guides
 
-```bash
-# Start the development server
-cd apps/web/blog-api
-lapis server development
-
-# API will be available at http://localhost:8080
-```
-
-**API Endpoints:**
-- `GET /` - API information
-- `GET /posts` - List all posts
-- `GET /posts/:id` - Get specific post
-- `POST /posts` - Create new post
-- `PUT /posts/:id` - Update post
-- `DELETE /posts/:id` - Delete post
-- `GET /health` - Health check
-
-### Static Site Generator
-
-#### Features (`apps/static-site/`)
-- Markdown to HTML conversion
-- YAML frontmatter support
-- Template rendering
-- Fast generation with LuaJIT
-
-```bash
-# Build the static site
-cd apps/static-site
-luajit build.lua
-
-# Output will be in the 'dist' directory
-```
-
-### Mobile & Desktop Applications
-
-#### Solar2D Demo (`apps/mobile-desktop/solar2d-demo/`)
-Cross-platform application demonstrating:
-- Interactive UI elements
-- Physics simulation
-- Data persistence
-- Cross-platform compatibility
-
-Open the project in Solar2D Simulator or build for your target platform.
-
-## 🔧 Development
-
-### Prerequisites
-
-- **LuaJIT** 2.0 or higher
-- **LuaRocks** package manager
-- **Make** (optional, for convenience commands)
-
-### Setup
-
-1. Clone the repository:
-```bash
-git clone https://github.com/dunamismax/lua-apps.git
-cd lua-apps
-```
-
-2. Run the setup script:
-```bash
-make setup
-# or
-luajit tools/setup.lua
-```
-
-3. Install dependencies:
-```bash
-make install
-# or manually:
-luarocks install argparse
-luarocks install lapis
-luarocks install lume
-luarocks install luasocket
-luarocks install lanes
-```
-
-### Available Commands
-
-```bash
-make help          # Show all available commands
-make setup          # Set up development environment
-make test           # Run all tests
-make lint           # Check code syntax
-make build          # Build all applications
-make clean          # Clean build artifacts
-make demo           # Run demo applications
-make dev-web        # Start web development server
-make dev-static     # Build static site in watch mode
-```
-
-### Testing
-
-Run the comprehensive test suite:
-
-```bash
-make test
-# or
-luajit tools/test-runner.lua
-```
-
-Tests include:
-- Lua syntax validation
-- Unit tests for shared utilities
-- Application integration tests
-- Test report generation
-
-## 📚 Documentation
-
-### Shared Libraries
-
-#### Utils (`shared/utils/init.lua`)
-Common utility functions for file operations, string manipulation, and data processing.
-
-#### Logger (`shared/utils/logger.lua`)
-Structured logging with configurable levels (DEBUG, INFO, WARN, ERROR).
-
-#### HTTP Client (`shared/networking/http_client.lua`)
-Simple HTTP client for making REST API calls.
-
-#### Database (`shared/database/sqlite.lua`)
-SQLite database abstraction layer (mock implementation).
-
-### Best Practices
-
-1. **Code Organization**: Keep related functionality in modules
-2. **Error Handling**: Use proper error checking and logging
-3. **Performance**: Leverage LuaJIT for performance-critical code
-4. **Testing**: Write tests for all shared utilities
-5. **Documentation**: Document public APIs and complex functions
-
-## 🌟 Features Showcase
-
-### 1. High Performance
-- LuaJIT JIT compilation for maximum speed
-- Asynchronous request handling in web applications
-- Efficient memory usage
-
-### 2. Cross-Platform
-- Solar2D apps run on iOS, Android, Windows, macOS, Linux
-- CLI tools work on any system with Lua
-- Web applications deployable anywhere
-
-### 3. Modern Development
-- Package management with LuaRocks
-- Automated testing and linting
-- Git hooks for code quality
-- Comprehensive build system
-
-### 4. Real-World Ready
-- Proper error handling and logging
-- Configuration management
-- Data persistence
-- Production deployment considerations
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Add tests for new functionality
-4. Ensure all tests pass: `make test`
-5. Submit a pull request
-
-## 📄 License
-
-MIT License - see LICENSE file for details.
-
-## 🔗 Resources
-
-- [Lua Official Site](https://www.lua.org/)
-- [LuaJIT](https://luajit.org/)
-- [Lapis Framework](https://leafo.net/lapis/)
-- [Solar2D](https://solar2d.com/)
-- [LuaRocks](https://luarocks.org/)
+</details>
 
 ---
 
-**Built with ❤️ and Lua**
+## Demo Applications
 
-This monorepo demonstrates that Lua is not just a configuration or scripting language—it's a powerful, versatile tool capable of building modern applications across all platforms.
+This monorepo includes four fully functional demo applications showcasing each platform:
+
+### 💻 **CLI Applications** (Lua + argparse)
+
+Professional command-line tools with full argument parsing and help systems.
+
+**Todo Manager** - Full-featured task management with JSON persistence
+**File Organizer** - Intelligent file organization by extension or date
+
+### 🌐 **Web Applications** (Lapis)
+
+High-performance web services built on OpenResty with asynchronous request handling.
+
+**Blog API** - RESTful service with full CRUD operations, JSON responses, and health monitoring
+
+### 📝 **Static Site Generator** (Custom Lua)
+
+Fast static site generation with modern web development features.
+
+**Markdown Processor** - YAML frontmatter support, template rendering, and lightning-fast generation
+
+### 📱 **Mobile & Desktop App** (Solar2D)
+
+Cross-platform application demonstrating native app development capabilities.
+
+**Interactive Demo** - Physics simulation, UI widgets, data persistence, and touch/click interactions
+
+---
+
+## Development
+
+### Creating New Applications
+
+```bash
+# Use the convenient make targets for rapid development
+make new-cli-app NAME=my-tool         # Create new CLI application
+make new-web-app NAME=my-api          # Create new web service
+make new-static-site NAME=my-blog     # Create new static site
+make new-mobile-app NAME=my-app       # Create new Solar2D project
+
+# Or copy and customize existing demo applications
+cp -r apps/cli/todo-manager apps/cli/my-new-tool
+cp -r apps/web/blog-api apps/web/my-new-api
+```
+
+### Building and Testing
+
+```bash
+# Development workflow
+make setup        # Set up development environment
+make test         # Run comprehensive test suite
+make build        # Build all applications
+make demo         # Try all demo applications
+
+# Individual application testing
+luajit apps/cli/todo-manager.lua --help      # Test CLI app
+cd apps/web/blog-api && lapis server         # Test web app
+cd apps/static-site && luajit build.lua      # Test static generator
+```
+
+### Quality Assurance
+
+```bash
+# Code quality and validation
+make lint         # Check Lua syntax across all files
+make test         # Run unit tests and integration tests
+make clean        # Clean build artifacts and temporary files
+```
+
+---
+
+## Shared Libraries Usage
+
+The monorepo provides battle-tested libraries for common development patterns:
+
+```lua
+-- Utility functions
+local utils = require("shared.utils")
+local content = utils.read_file("config.txt")
+local slug = utils.slugify("My Blog Post Title")
+
+-- Structured logging
+local logger = require("shared.utils.logger")
+logger.info("Application started")
+logger.error("Failed to connect: %s", error_message)
+
+-- HTTP client for web services
+local http = require("shared.networking.http_client")
+local response = http.get("https://api.example.com/data")
+if response.success then
+    print("Data received:", response.body)
+end
+
+-- Database operations (mock implementation)
+local db = require("shared.database.sqlite")
+local conn = db.new("app.db")
+local result = conn:select("SELECT * FROM users")
+```
+
+---
+
+## Documentation
+
+- **[API Documentation](docs/API.md)** - Complete API reference for all shared libraries
+- **[Getting Started Guide](docs/getting-started.md)** - Step-by-step tutorial for new developers
+- **[Best Practices](docs/best-practices.md)** - Professional development patterns and conventions
+- **[Examples](examples/)** - Working code examples and tutorials
+
+---
+
+## Support This Project
+
+If you find this project valuable for your application development journey, consider supporting its continued development:
+
+<p align="center">
+  <a href="https://www.buymeacoffee.com/dunamismax" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" />
+  </a>
+</p>
+
+---
+
+## Let's Connect
+
+<p align="center">
+  <a href="https://twitter.com/dunamismax" target="_blank"><img src="https://img.shields.io/badge/Twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter"></a>
+  <a href="https://bsky.app/profile/dunamismax.bsky.social" target="_blank"><img src="https://img.shields.io/badge/Bluesky-blue?style=for-the-badge&logo=bluesky&logoColor=white" alt="Bluesky"></a>
+  <a href="https://reddit.com/user/dunamismax" target="_blank"><img src="https://img.shields.io/badge/Reddit-%23FF4500.svg?&style=for-the-badge&logo=reddit&logoColor=white" alt="Reddit"></a>
+  <a href="https://discord.com/users/dunamismax" target="_blank"><img src="https://img.shields.io/badge/Discord-dunamismax-7289DA.svg?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
+  <a href="https://signal.me/#p/+dunamismax.66" target="_blank"><img src="https://img.shields.io/badge/Signal-dunamismax.66-3A76F0.svg?style=for-the-badge&logo=signal&logoColor=white" alt="Signal"></a>
+</p>
+
+---
+
+## License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<p align="center">
+  <strong>Built with Lua</strong><br>
+  <sub>A comprehensive foundation for application development across all platforms</sub>
+</p>
