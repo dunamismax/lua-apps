@@ -119,58 +119,111 @@ lua-apps/
 <details>
 <summary><strong>Click to expand: Technology Stack Details</strong></summary>
 
-This monorepo encompasses the complete Lua application development ecosystem, providing developers with a unified development environment across multiple specialized platforms. Each component targets different application contexts while maintaining the simplicity and power of Lua as the core programming language.
+Below is a comprehensive, refined technology stack for application development using the Lua programming language. This stack is designed as a complete toolkit for creating cross-platform web, mobile, desktop, GUI, and CLI applications. Lua is celebrated for its simplicity, performance, and ease of integration, making this stack ideal for a wide range of projects, from simple utilities to complex applications.
 
-### **Web Development: Modern HTTP Services**
+### **Core Runtime: The Foundation of Your Application**
 
-The foundation for building scalable web applications and APIs.
+The high-performance core remains the same, providing the speed needed for demanding applications.
 
-- [**Lapis**](https://leafo.net/lapis/)
+- [**LuaJIT**](https://luajit.org/luajit.html)
+  - **Role:** High-Performance Lua Interpreter
+  - **Description:** A Just-In-Time (JIT) compiler and high-performance interpreter for the Lua language. It significantly boosts execution speed, which is critical for demanding applications. LuaJIT is the foundation of this stack, enabling the performance required for modern development.
+
+### **Application Frameworks**
+
+This section is now broken down by application type for greater clarity, adding a crucial new category for native desktop GUI development.
+
+### **Web Development**
+
+- [**Lapis**](https://leafo.net/lapis/reference.html)
   - **Role:** High-Performance Web Framework
-  - **Description:** A fast and flexible web framework for Lua that runs on OpenResty (Nginx + LuaJIT). Lapis leverages Lua coroutines for asynchronous request handling, making it ideal for building scalable APIs and web applications with exceptional performance.
-- **Static Site Generation:** Custom Markdown-to-HTML converter with frontmatter support
-- **HTTP Client:** Full-featured client for REST API consumption and external service integration
+  - **Description:** A fast and flexible web framework for Lua that runs on OpenResty (a specialized Nginx). Lapis leverages Lua coroutines to handle a high number of concurrent requests, making it ideal for building scalable APIs and web applications.
+- [**Satelito**](https://github.com/dpapavas/satelito)
+  - **Role:** Static Site Generator
+  - **Description:** A simple, elegant, and effective static site generator written in Lua. It's a prime example of a tool that compiles content from templates and Markdown into a set of static HTML files, perfect for blogs, documentation, and content-focused websites.
 
-### **Mobile & Desktop Development: Cross-Platform Applications**
+### **Mobile & Rich Interactive Apps**
 
-Native application development for all major platforms from a single codebase.
-
-- [**Solar2D**](https://solar2d.com/)
+- [**Solar2D**](https://docs.solar2d.com/)
   - **Role:** Cross-Platform Mobile and Desktop Framework
-  - **Description:** A mature, free, and open-source framework for building 2D applications and games for iOS, Android, Windows, Linux, macOS, and tvOS. Solar2D's streamlined workflow and powerful APIs enable rapid development of rich, interactive apps.
-- **Physics Integration:** Built-in Box2D physics engine for interactive applications
-- **Cross-Platform Deployment:** Single codebase compiles to all major platforms
+  - **Description:** A mature, free, and open-source framework for building 2D applications and games for all major platforms from a single codebase. Its strength lies in creating rich, interactive, and graphically-intensive applications.
 
-### **Command-Line Development: Professional CLI Tools**
+### **Native Desktop GUI Applications**
 
-Building powerful and user-friendly command-line applications.
+- [**IUP**](https://www.tecgraf.puc-rio.br/iup/)
+  - **Role:** Native GUI Toolkit
+  - **Description:** A portable, cross-platform toolkit for building graphical user interfaces with native controls. IUP provides a simple API that allows Lua applications to have a conventional look and feel on Windows, Linux, and macOS, making it the ideal choice for creating traditional desktop tools and utilities.
+
+### **Command-Line Interface (CLI)**
 
 - [**argparse**](https://github.com/mpeterv/argparse)
   - **Role:** Command-Line Parsing Library
-  - **Description:** A feature-rich command-line parser inspired by Python's argparse. Supports positional arguments, options, flags, sub-commands, and automatic help generation for professional CLI experiences.
+  - **Description:** A feature-rich command-line parser that simplifies the creation of professional CLI applications. It supports positional arguments, options, and sub-commands while automatically generating help and usage messages.
 
-### **Shared Development Libraries**
+### **Core Libraries: A Curated & Expanded Toolset**
 
-A curated collection of production-tested libraries for common development tasks.
+This section is expanded with dedicated categories for data handling and system operations—critical for application development.
+
+### **Data Handling & Storage**
+
+- [**LuaSQL**](https://keplerproject.github.io/luasql/)
+  - **Role:** Database Connectivity
+  - **Description:** A universal database interface that provides a consistent API for connecting to various SQL databases like MySQL, PostgreSQL, and SQLite through ODBC and native drivers.
+- [**pgmoon**](https://github.com/leafo/pgmoon)
+  - **Role:** PostgreSQL Driver
+  - **Description:** A pure-Lua PostgreSQL driver that works seamlessly with Lapis and other frameworks. It supports asynchronous and blocking modes, making it a versatile choice for web applications connecting to PostgreSQL.
+- [**lua-cjson**](https://www.kyne.com.au/~mark/software/lua-cjson.php)
+  - **Role:** JSON Encoding/Decoding
+  - **Description:** A high-performance JSON library implemented in C. It provides extremely fast encoding and decoding of JSON data, a critical task for web APIs and configuration management.
+
+### **Networking & Concurrency**
+
+- [**LuaSocket**](https://lunarmodules.github.io/luasocket/introduction.html)
+  - **Role:** Low-Level Networking Library
+  - **Description:** The foundational Lua library for network programming, providing straightforward access to low-level network protocols like TCP and UDP. It's the essential building block for most network-aware applications.
+- [**Copas**](https://keplerproject.github.io/copas/)
+  - **Role:** Asynchronous Task Dispatcher
+  - **Description:** A library that simplifies creating concurrent, non-blocking network applications using Lua coroutines. Copas works on top of LuaSocket to handle many network connections simultaneously without the complexity of multithreading.
+- [**Lanes**](https://github.com/LuaLanes/lanes)
+  - **Role:** Multithreading Library
+  - **Description:** An extension library that enables true multithreading by running parallel Lua states in separate OS threads. Lanes is essential for CPU-intensive tasks, allowing you to leverage multi-core systems to their full potential.
+
+### **System & File Operations**
+
+- [**LuaFileSystem (LFS)**](https://keplerproject.github.io/luafilesystem/manual.html)
+  - **Role:** Filesystem Operations
+  - **Description:** An indispensable library that provides a portable way to access the underlying file system. LFS allows you to work with directories, file attributes, and paths in a platform-independent manner.
+
+### **Utility & Helpers**
 
 - [**lume**](https://github.com/rxi/lume)
   - **Role:** General-Purpose Utility Library
-  - **Description:** Essential helper functions extending Lua's standard library with tools for math, table manipulation, functional programming, and application-specific utilities.
-- [**LuaSocket**](https://lunarmodules.github.io/luasocket/)
-  - **Role:** Low-Level Networking Library
-  - **Description:** The foundational Lua library for network programming, providing straightforward access to TCP, UDP, and HTTP protocols.
-- [**Lanes**](https://github.com/LuaLanes/lanes)
-  - **Role:** Multithreading Library
-  - **Description:** Enables true multithreading by running parallel Lua states in separate OS threads, essential for CPU-intensive tasks and concurrent processing.
+  - **Description:** A collection of essential, well-tested helper functions that extends Lua's standard library. Lume provides a lightweight, focused set of tools for common tasks involving math, table manipulation, and functional programming.
 
-### **Development Tools and Workflow**
+### **Development, Tooling, & Quality Assurance**
 
-Modern development tooling designed for rapid iteration and professional application development.
+This section is enhanced with dedicated tools for code quality and application distribution, mirroring professional development workflows.
 
-- **Environment Setup:** Automated dependency installation and configuration
-- **Testing Framework:** Comprehensive test runner with syntax validation and unit tests
-- **Build Automation:** Makefile with shortcuts for common development tasks
-- **Documentation System:** Complete API references and development guides
+### **Development Environments & Package Management**
+
+- [**LuaRocks**](https://luarocks.org/learn)
+  - **Role:** Package Manager
+  - **Description:** The premier package manager for the Lua ecosystem. LuaRocks allows you to easily find, install, and manage Lua libraries and dependencies ("rocks"), streamlining project setup.
+
+### **Quality Assurance**
+
+- [**busted**](https://lunarmodules.github.io/busted/)
+  - **Role:** Unit Testing Framework
+  - **Description:** The most popular testing framework for Lua, enabling you to write and run automated tests for your application's logic. Adopting unit testing is critical for ensuring code correctness and refactoring with confidence.
+- [**luacheck**](https://github.com/mpeterv/luacheck)
+  - **Role:** Static Analyzer & Linter
+  - **Description:** A tool that analyzes your code to detect issues like unused variables, undefined globals, and syntax errors before you run your application. Integrating a linter is a best practice for maintaining high-quality, bug-free code.
+
+### **Build & Distribution**
+
+- [**luastatic**](https://github.com/ers35/luastatic)
+  - **Role:** Single-File Executable Builder
+  - **Description:** A tool to bundle a Lua script and its dependencies into a single, standalone executable. This is essential for distributing CLI tools or desktop applications to users who do not have a Lua interpreter installed.
 
 </details>
 
