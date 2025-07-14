@@ -1,0 +1,58 @@
+settings = {
+    orientation = {
+        default = "portrait",
+        supported = { "portrait", "portraitUpsideDown" }
+    },
+    
+    android = {
+        usesPermissions = {
+            "android.permission.INTERNET",
+            "android.permission.ACCESS_NETWORK_STATE",
+        },
+        
+        applicationChildElements = {
+            [[
+                <uses-feature android:name="android.hardware.location" android:required="false" />
+                <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+            ]]
+        },
+    },
+    
+    iphone = {
+        xcassets = "Images.xcassets",
+        plist = {
+            UIStatusBarHidden = false,
+            UILaunchStoryboardName = "LaunchScreen",
+            CFBundleIconFiles = {
+                "Icon-40.png",
+                "Icon-58.png",
+                "Icon-76.png",
+                "Icon-80.png",
+                "Icon-87.png",
+                "Icon-120.png",
+                "Icon-152.png",
+                "Icon-167.png",
+                "Icon-180.png",
+            },
+        },
+    },
+    
+    window = {
+        defaultMode = "normal",
+        resizable = true,
+        minViewWidth = 320,
+        minViewHeight = 480,
+        enableCloseButton = true,
+        enableMinimizeButton = true,
+        enableMaximizeButton = true,
+        titleText = {
+            default = "Solar2D Demo App",
+        },
+    },
+    
+    plugins = {
+        ["plugin.utf8"] = {
+            publisherId = "com.coronalabs"
+        },
+    },
+}

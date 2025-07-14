@@ -1,0 +1,29 @@
+rockspec_format: "3.0"
+package: "lua-apps"
+version: "1.0.0-1"
+
+source:
+  url: "https://github.com/dunamismax/lua-apps"
+  tag: "v1.0.0"
+
+description:
+  summary: "Comprehensive Lua application monorepo"
+  detailed: |
+    A complete monorepo for building various types of Lua applications including
+    web apps, mobile apps, desktop apps, CLI tools, and static sites using the
+    best Lua technologies available.
+  homepage: "https://github.com/dunamismax/lua-apps"
+  maintainer: "lua-apps maintainer"
+  license: "MIT"
+
+dependencies:
+  lua: ">=5.1"
+  luajit: ">=2.0"
+  argparse: ">=0.7"
+  lapis: ">=1.9"
+  lume: ">=2.3"
+  luasocket: ">=3.0"
+  lanes: ">=3.16"
+
+build:
+  type: "none"
